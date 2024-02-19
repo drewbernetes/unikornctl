@@ -1,7 +1,37 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v4.5.0
     hooks:
       -   id: trailing-whitespace
       -   id: end-of-file-fixer
       -   id: check-added-large-files
+      - id: check-yaml
+  - repo: https://github.com/drewbernetes/pre-commits.git
+    rev: v0.1.0
+    hooks:
+      - id: trivy
+        args:
+          - fs
+          - .
+  - repo: https://github.com/drewbernetes/pre-commits.git
+    rev: v0.1.0
+    hooks:
+      - id: docker
+        args:
+          - --image-name
+          - unikornctl
+          - --dockerfile-path
+          - ./docker/Dockerfile
+          - --context
+          - .
+  - repo: https://github.com/drewbernetes/pre-commits.git
+    rev: v0.1.0
+    hooks:
+      - id: trivy
+        args:
+          - image
+          - --severity
+          - HIGH,CRITICAL
+          - --ignorefile
+          - .trivyignore
+          - local/unikornctl:0.0.0
