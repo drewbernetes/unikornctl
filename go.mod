@@ -1,8 +1,6 @@
-module github.com/eschercloudai/eckctl
+module github.com/drewbernetes/unikornctl
 
 go 1.21
-
-toolchain go1.21.3
 
 require (
 	github.com/deepmap/oapi-codegen v1.16.2

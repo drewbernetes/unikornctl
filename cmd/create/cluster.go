@@ -9,15 +9,15 @@ import (
 	"os"
 	"time"
 
-	"github.com/eschercloudai/eckctl/pkg/auth"
-	"github.com/eschercloudai/eckctl/pkg/generated"
+	"github.com/drewbernetes/unikornctl/pkg/auth"
+	"github.com/drewbernetes/unikornctl/pkg/generated"
 	"github.com/spf13/cobra"
 	"github.com/tidwall/pretty"
 )
 
 var createClusterCmd = &cobra.Command{
 	Use:   "cluster",
-	Short: "Create an ECK-managed cluster from a JSON definition",
+	Short: "Create an Unikorn-managed cluster from a JSON definition",
 	Run: func(cmd *cobra.Command, args []string) {
 		url, u, p, project = cmd.Flag("url").Value.String(), cmd.Flag("username").Value.String(),
 			cmd.Flag("password").Value.String(), cmd.Flag("project").Value.String()

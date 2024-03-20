@@ -21,8 +21,8 @@
     "controlPlane": {
         "replicas": 1,
         "version": "v1.26.4",
-        "imageName": "eck-230522-623627db",
-        "flavorName": "g.2.standard",
+        "imageName": "kmi-230522-623627db",
+        "flavorName": "m1.medium",
         "disk": {
             "size": 50
         }
@@ -36,8 +36,8 @@
             "machine": {
                 "replicas": 1,
                 "version": "v1.26.4",
-                "imageName": "eck-230522-623627db",
-                "flavorName": "g.2.standard",
+                "imageName": "kmi-230522-623627db",
+                "flavorName": "m1.medium",
                 "disk": {
                     "size": 200
                 }
@@ -51,8 +51,8 @@
 	    },
             "machine": {
                 "version": "v1.26.4",
-                "imageName": "eck-230522-623627db",
-                "flavorName": "g.4.highmem.a100.1g.10gb",
+                "imageName": "kmi-230522-623627db",
+                "flavorName": "gpu.medium",
                 "disk": {
                     "size": 200
                 }

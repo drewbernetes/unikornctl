@@ -1,5 +1,5 @@
 /*
-Copyright © 2023 EscherCloudAI
+Copyright © 2024 Unikorn Authors
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -16,7 +16,7 @@ limitations under the License.
 package main
 
 import (
-	"github.com/eschercloudai/eckctl/cmd"
+	"github.com/drewbernetes/unikornctl/cmd"
 )
 
 func main() {

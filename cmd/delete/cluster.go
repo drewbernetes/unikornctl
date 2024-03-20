@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/eschercloudai/eckctl/pkg/auth"
+	"github.com/drewbernetes/unikornctl/pkg/auth"
 	"github.com/spf13/cobra"
 )
 
@@ -19,7 +19,7 @@ var (
 func deleteClusterCmd() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "cluster",
-		Short: "Delete an ECK-managed cluster",
+		Short: "Delete an Unikorn-managed cluster",
 		Run: func(cmd *cobra.Command, args []string) {
 			url, u, p, project = cmd.Flag("url").Value.String(), cmd.Flag("username").Value.String(),
 				cmd.Flag("password").Value.String(), cmd.Flag("project").Value.String()

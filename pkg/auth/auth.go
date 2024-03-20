@@ -1,4 +1,4 @@
-// https://github.com/eschercloudai/unikorn/blob/main/examples/serverclient.go
+// https://github.com/drewbernetes/unikorn/blob/main/examples/serverclient.go
 package auth
 
 import (
@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/eschercloudai/eckctl/pkg/generated"
+	"github.com/drewbernetes/unikornctl/pkg/generated"
 	"golang.org/x/oauth2"
 )
 

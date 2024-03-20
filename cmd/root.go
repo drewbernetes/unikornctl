@@ -5,10 +5,10 @@ import (
 	"log"
 	"os"
 
-	"github.com/eschercloudai/eckctl/cmd/create"
-	"github.com/eschercloudai/eckctl/cmd/delete"
-	"github.com/eschercloudai/eckctl/cmd/get"
-	"github.com/eschercloudai/eckctl/cmd/update"
+	"github.com/drewbernetes/unikornctl/cmd/create"
+	"github.com/drewbernetes/unikornctl/cmd/delete"
+	"github.com/drewbernetes/unikornctl/cmd/get"
+	"github.com/drewbernetes/unikornctl/cmd/update"
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
@@ -36,15 +36,15 @@ func Execute() {
 
 func NewRootCommand() *cobra.Command {
 	rootCmd := &cobra.Command{
-		Use:   "eckctl",
-		Short: "A CLI for working with the EscherCloud Kubernetes (ECK) Service",
-		Long:  "eckctl - manage Kubernetes clusters via the EscherCloudAI Kubernetes Service",
+		Use:   "unikornctl",
+		Short: "A CLI for working with the Unikorn Kubernetes Service",
+		Long:  "unikornctl - manage Kubernetes clusters via the Unikorn Kubernetes Service",
 		PersistentPreRunE: func(cmd *cobra.Command, args []string) error {
 			return initializeConfig(cmd)
 		},
 	}
 
-	rootCmd.PersistentFlags().StringVar(&url, "url", "https://eck.nl1.eschercloud.dev", "URL to Unikorn API")
+	rootCmd.PersistentFlags().StringVar(&url, "url", "https://clusters.unikorn-cloud.org", "URL to Unikorn API")
 	rootCmd.PersistentFlags().StringVar(&username, "username", "", "Username")
 	rootCmd.PersistentFlags().StringVar(&password, "password", "", "Password")
 	rootCmd.PersistentFlags().StringVar(&project, "project", "", "Project ID")
@@ -63,10 +63,10 @@ func initializeConfig(cmd *cobra.Command) error {
 		home, err := os.UserHomeDir()
 		cobra.CheckErr(err)
 
-		// Search config in home directory with name ".eckctl" (without extension).
+		// Search config in home directory with name ".unikornctl" (without extension).
 		v.AddConfigPath(home)
 		v.SetConfigType("yaml")
-		v.SetConfigName(".eckctl")
+		v.SetConfigName(".unikornctl")
 	}
 
 	if err := v.ReadInConfig(); err != nil {

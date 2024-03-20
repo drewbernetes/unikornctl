@@ -8,8 +8,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/eschercloudai/eckctl/pkg/auth"
-	"github.com/eschercloudai/eckctl/pkg/generated"
+	"github.com/drewbernetes/unikornctl/pkg/auth"
+	"github.com/drewbernetes/unikornctl/pkg/generated"
 	"github.com/spf13/cobra"
 )
 
